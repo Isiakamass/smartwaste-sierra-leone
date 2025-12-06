@@ -2,42 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Smart Waste Management</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Smart Waste Management Dashboard</h1>
-    </header>
-    <main>
-        <section id="bin-status">
-            <h2>Bin Status</h2>
-            <ul id="bins-list"></ul>
-        </section>
-        <section id="add-bin">
-            <h2>Add Bin</h2>
-            <form id="bin-form">
-                <input type="text" id="bin-name" placeholder="Bin Name" required>
-                <input type="number" id="bin-level" placeholder="Fill Level (%)" required>
-                <button type="submit">Add Bin</button>
-            </form>
-        </section>
-    </main>
-    <script src="app.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Waste Management System</title>
+    <title>Smart Waste Management Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Smart Waste Management Dashboard</h1>
-    <p>Track waste bins, monitor fill levels, and optimize waste collection routes.</p>
+    <header>
+        <h2>Smart Waste Management Dashboard</h2>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <ul>
+                <li>Dashboard</li>
+                <li>Bin Status</li>
+                <li>Collection Routes</li>
+                <li>Reports</li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <div class="card">
+                <h3>Total Bins</h3>
+                <p id="totalBins">0</p>
+            </div>
+            <div class="card">
+                <h3>Full Bins</h3>
+                <p id="fullBins">0</p>
+            </div>
+            <div class="card">
+                <h3>Collection Alerts</h3>
+                <p id="alerts">0</p>
+            </div>
+        </main>
+    </div>
 
     <script src="app.js"></script>
 </body>
