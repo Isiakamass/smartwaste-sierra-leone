@@ -1,13 +1,19 @@
 {
-  "name": "backend",
+  "name": "smart-waste-management",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Interactive smart waste management system with simulated IoT bin sensors",
+  "main": "backend/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Your Name",
   "license": "ISC",
-  "type": "commonjs"
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
 }
+
