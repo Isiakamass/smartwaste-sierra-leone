@@ -1,16 +1,14 @@
 const express = require('express');
-const path = require('path');
 const app = express();
 const PORT = 3000;
 
-// Middleware to serve frontend
-app.use(express.static(path.join(__dirname, '../frontend')));
+// Middleware to parse JSON
+app.use(express.json());
 
-// Sample API endpoint
-app.get('/api/status', (req, res) => {
-    res.json({ message: 'Smart Waste Management System is running!' });
-});
+// Register your routes here
+app.use('/api', require('./routes/binRoutes'));
 
+// Start the server
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on http://localhost:${PORT}`);
 });
